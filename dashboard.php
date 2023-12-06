@@ -128,7 +128,7 @@ if(empty($_SESSION)){
             ?>
         </div>
     </div>
-</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 <?php
 
 // Consulta SQL para contar o número de clientes por tipo
@@ -149,9 +149,10 @@ $tiposJson = json_encode($tipos);
 $totalClientesJson = json_encode($totalClientes);
 ?>
 
-<div style="width: 80%; margin: auto;">
-    <canvas id="barChart"></canvas>
+<div style="width: 60%; margin: auto;">
+    <canvas id="barChart" width="300" height="100"></canvas>
 </div>
+
 
 <script>
     // Dados obtidos do PHP
