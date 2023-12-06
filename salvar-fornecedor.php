@@ -1,7 +1,7 @@
 <?php
 
 switch ($_REQUEST["acao"]){
-    case 'cadastrar':
+    case 'cadastrar-forn':
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $senha = md5($_POST["senha"]);
@@ -23,7 +23,7 @@ switch ($_REQUEST["acao"]){
 
         break;
 
-    case 'editar':
+    case 'editar-forn':
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $senha = md5($_POST["senha"]);
@@ -44,7 +44,7 @@ switch ($_REQUEST["acao"]){
         }
         break;
 
-    case 'excluir':
+    case 'excluir-forn':
         $sql = "DELETE FROM fornecedores WHERE id=".$_REQUEST["id"];
 
         $res = $conn->query($sql);

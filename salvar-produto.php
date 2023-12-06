@@ -21,7 +21,7 @@ switch ($_REQUEST["acao"]){
 
         break;
 
-    case 'editar':
+    case 'editar-prod':
         $descri = $_POST["nome"];
         $preco = $_POST["preco"];
         $qtdd = $_POST["estoque"];
@@ -40,7 +40,7 @@ switch ($_REQUEST["acao"]){
         }
         break;
 
-    case 'excluir':
+    case 'excluir-prod':
         $sql = "DELETE FROM produtos WHERE id=".$_REQUEST["id"];
 
         $res = $conn->query($sql);
